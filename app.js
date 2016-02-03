@@ -1,7 +1,7 @@
 (function() {
   var config, runSafeApply;
 
-  angular.module('myApp', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'myApp.module1', 'moduleabc']);
+  angular.module('myApp', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'myApp.module1']);
 
   config = function($urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
