@@ -3,13 +3,14 @@
 
   angular.module('myApp.module1', []);
 
-  routes = function($routeProvider) {
-    $routeProvider.when('/module1', {
+  routes = function($stateProvider) {
+    $stateProvider.state('module1', {
+      url: '/module1',
       templateUrl: 'module1/module1.html'
     });
   };
 
-  routes.$inject = ['$routeProvider'];
+  routes.$inject = ['$stateProvider'];
 
   angular.module('myApp.module1').config(routes);
 

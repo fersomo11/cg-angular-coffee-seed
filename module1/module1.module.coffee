@@ -1,14 +1,15 @@
 angular.module 'myApp.module1', []
 
-routes = ($routeProvider) ->
-  $routeProvider
-    .when '/module1', {
-      templateUrl: 'module1/module1.html'
+routes = ($stateProvider) ->
+  $stateProvider
+    .state 'module1', {
+      url: '/module1',
+      templateUrl:'module1/module1.html'
     }
   return
 
 # Injection of dependecies
-routes.$inject = ['$routeProvider']
+routes.$inject = ['$stateProvider']
 
 angular
   .module 'myApp.module1'

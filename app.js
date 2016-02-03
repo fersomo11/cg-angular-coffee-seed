@@ -1,12 +1,10 @@
 (function() {
   var config, runSafeApply;
 
-  angular.module('myApp', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'myApp.module1']);
+  angular.module('myApp', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'myApp.module1', 'moduleabc']);
 
-  config = function($routeProvider) {
-    $routeProvider.otherwise({
-      redirectTo: '/home'
-    });
+  config = function($urlRouterProvider) {
+    $urlRouterProvider.otherwise('/home');
   };
 
   runSafeApply = function($rootScope) {
@@ -24,7 +22,7 @@
     };
   };
 
-  config.$inject = ['$routeProvider'];
+  config.$inject = ['$urlRouterProvider'];
 
   runSafeApply.$inject = ['$rootScope'];
 

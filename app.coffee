@@ -1,11 +1,9 @@
-angular.module 'myApp', ['ui.bootstrap','ui.utils','ngRoute','ngAnimate', 'myApp.module1']
+angular.module 'myApp', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'myApp.module1']
 
 # Routing
-config = ($routeProvider) ->
-  $routeProvider
-    .otherwise {
-      redirectTo: '/home'
-    }
+config = ($urlRouterProvider) ->
+  $urlRouterProvider
+    .otherwise '/home'
   return
   
 # SafeApply logic
@@ -22,7 +20,7 @@ runSafeApply = ($rootScope) ->
   return
   
 # Injection of dependencies
-config.$inject = ['$routeProvider']
+config.$inject = ['$urlRouterProvider']
 runSafeApply.$inject = ['$rootScope']
 
 angular

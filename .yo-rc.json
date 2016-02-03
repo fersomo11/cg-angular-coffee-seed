@@ -1,6 +1,6 @@
 {
   "generator-cg-angular": {
-    "uirouter": false,
+    "uirouter": true,
     "partialDirectory": "partial/",
     "modalDirectory": "partial/",
     "directiveDirectory": "directive/",
@@ -18,12 +18,6 @@
         "marker": "/* Add Component LESS Above */",
         "template": "@import \"<%= filename %>\";"
       }
-    },
-    "modules": [
-      {
-        "name": "module2",
-        "file": "module2\\module2.js"
-      }
-    ]
+    }
   }
 }
